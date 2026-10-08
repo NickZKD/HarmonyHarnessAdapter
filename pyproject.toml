@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "harmony-harness-adapter"
+version = "0.1.0"
+description = "Adapter for evaluating HarmonyOS harnesses with a Claw-SWE-Bench-style contract."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Harmony Harness Adapter Contributors" }]
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+harmony-adapter = "harmony_adapter.cli:main"
+harmony-adapter-doctor = "harmony_adapter.doctor:main"
+harmony-adapter-gui = "harmony_adapter.gui:main"
+harmony-adapter-benchmark = "harmony_adapter.benchmark:main"
+
+[tool.setuptools.packages.find]
+include = ["harmony_adapter*"]
